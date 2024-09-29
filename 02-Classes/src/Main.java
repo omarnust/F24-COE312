@@ -88,7 +88,7 @@ public class Main {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		
+	
 		Car myCar = new Car();
 		System.out.println(myCar.color);
 				
@@ -122,21 +122,25 @@ public class Main {
 			System.out.println("Color");
 			String color = input.nextLine();
 			
+			input.close();
+			
 			Car myNewCar2 = new Car(make, model, year, color);
 			System.out.println(myNewCar2.aboutCar());
 			
 		}catch(Exception e) {
-			System.out.println("Error: asdf");
+			System.out.println("Error: " + e);
 		}
 		
 		
-		int w = 10;
 		Cat myCat = new Cat(10);
 		Dog myDog = new Dog();
 		
 		
 		myCat.about();
 		myDog.about();
+		
+		myCat.sound();
+		myDog.sound();
 		
 		
 	}

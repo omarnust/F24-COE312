@@ -30,7 +30,6 @@ public abstract class Mammal extends Animal{
 		 
 	}
 	
-	@Override
 	public String sound() {
 		return "This mammal makes sound";
 	}

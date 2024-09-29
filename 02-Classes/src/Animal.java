@@ -7,7 +7,6 @@ public abstract class Animal {
 	int weight;
 	Leg[] legs;
 	
-	
 	Animal(){
 		
 	}
@@ -29,5 +28,7 @@ public abstract class Animal {
 	}
 	
 	public abstract String sound();
+		
+
 	
 }
