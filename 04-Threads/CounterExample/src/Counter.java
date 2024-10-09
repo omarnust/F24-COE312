@@ -10,7 +10,7 @@ public class Counter {
 	public void addCounter(String door) {	
 		try {		
 			int val = count;
-			Thread.sleep(10);
+			Thread.sleep(100);
 			count = val+1;
 			System.out.println(door + "-> Counter: " + count);
 		}catch(Exception e) {

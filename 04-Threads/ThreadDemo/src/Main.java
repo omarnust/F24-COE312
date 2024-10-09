@@ -19,8 +19,7 @@ public class Main {
 			im2.getThread().join();
 		}catch (InterruptedException e) {	
 	    }
-				
-		
+					
 		System.out.println("Main thread " +  Thread.currentThread().getName() + " terminated");
 	}
 

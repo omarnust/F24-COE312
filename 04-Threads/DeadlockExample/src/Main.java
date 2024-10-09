@@ -6,8 +6,8 @@ public class Main {
 		String pencil = "shared pencil";
 	
 		new female_student(notebook, pencil);
-		new female_student(notebook, pencil);
-		//new male_student(notebook, pencil);
+		//new female_student(notebook, pencil);
+		new male_student(notebook, pencil);
 	
 	}
 }

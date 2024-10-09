@@ -24,10 +24,10 @@ public class Door implements Runnable{
 	}
 	
 	public void run_withBlocksynchronization() {
+		
 		for (int i=0; i<totalPeople; i++) {
-			
 			synchronized(counter) {
-				counter.addCounter(Thread.currentThread().getName());
+				counter.addCounter(Thread.currentThread().getName());			
 			}
 		}
 	}
