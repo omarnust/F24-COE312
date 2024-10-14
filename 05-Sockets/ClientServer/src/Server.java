@@ -1,7 +1,9 @@
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.io.OutputStreamWriter;
 import java.io.DataOutputStream;
-import java.io.DataInputStream;
+import java.io.InputStreamReader;
+
 
 public class Server implements Runnable{
 	private Thread t;
@@ -20,9 +22,9 @@ public class Server implements Runnable{
 	public void startServer(){  
 		
 		try{  
-			myServer = new ServerSocket(6666);  
+			myServer = new ServerSocket(7777);  
 			
-			System.out.println("Listening for connection on 6666");
+			System.out.println("Listening for connection on 7777");
 			
 			while(true) {
 				Socket s = myServer.accept();//establishes connection
@@ -30,11 +32,20 @@ public class Server implements Runnable{
 				// create a new thread for communicating with this client
 				System.out.println("Connection established");
 		
-				DataOutputStream dout = new DataOutputStream(s.getOutputStream());  
-				//DataInputStream din = new DataInputStream(s.getInputStream());
+				//DataOutputStream dout = new DataOutputStream(s.getOutputStream());
+				//OutputStreamWriter dout = new OutputStreamWriter(s.getOutputStream());
 				
-				dout.writeUTF("Welcome");
-					
+				InputStreamReader din = new InputStreamReader(s.getInputStream());
+				
+				//dout.writeUTF("Welcome");
+				//dout.write("Wed 9 Oct");
+				
+				// to read and print data 
+	            int character;
+	            while ((character = din.read()) != -1) {
+	                 System.out.print((char) character);
+	            }
+	            s.close();
 			}
 			
 		}catch(Exception e){
