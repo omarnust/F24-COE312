@@ -14,7 +14,7 @@ public class Main {
 		//Alice a1 = new Alice(c1);
 		//Alice a2 = new Alice(c1);
 				
-		AliceSingle b1 = AliceSingle.getInstance(c1);
+		//AliceSingle b1 = AliceSingle.getInstance(c1);
 		
 		
 		
