@@ -20,10 +20,9 @@ public class Transaction implements Runnable{
                 boolean deposit = r.nextBoolean();
                 if (deposit) {
                     bankAccount.deposit(amount);
-                    System.out.println("Deposited " + amount + ", balance: " + bankAccount.getBalance());
+                    
                 } else {
                     bankAccount.withdraw(amount);
-                    System.out.println("Withdrawn " + amount + ", balance: " + bankAccount.getBalance());
                 }
             } catch (Exception e) {
                 System.out.println(e.getMessage());

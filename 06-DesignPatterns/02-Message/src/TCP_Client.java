@@ -36,12 +36,12 @@ public class TCP_Client extends ConcreteSubject implements Runnable {
 			BufferedReader br = new BufferedReader(reader);
 			String line = "";
 			while ((line = br.readLine()) != null) {
-				//System.out.println(line);
+				System.out.println(line);
 				
 				JSONObject jsonObject = (JSONObject) parser.parse(line);
 				String logS = (String) jsonObject.get("avAudioRecorderAveragePower");
 				float power = Float.parseFloat(logS);
-				//System.out.println(logS);
+				System.out.println(power);
 			
 				if(Math.abs(power)  < power_threshold) {
 					// send a message to who ever wants it 
