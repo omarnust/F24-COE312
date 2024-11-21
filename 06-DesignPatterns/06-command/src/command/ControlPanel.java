@@ -9,6 +9,7 @@ public class ControlPanel {
 	}
 
 	public void buttonWasPressed(int index){
+		// error checking 
 		slots[index].execute();
 		undoCommand = slots[index];
 	}
